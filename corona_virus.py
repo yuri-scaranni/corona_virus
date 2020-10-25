@@ -39,6 +39,8 @@ def load():
 
     print(dataframe.head())
     sqlEngine = create_engine('mysql+mysqlconnector://root:@127.0.0.1/scaranni_data', pool_recycle=3600)
+    sqlEngine = create_engine('mysql+mysqlconnector://{user}:{password}@{server}/{database}'.
+                              format(user='etl', password='Tocadovento@05051996*', server='localhost', database='scaranni_data'), pool_recycle=3600)
 
     dbConnection = sqlEngine.connect()
     print('>>>> Conectado')
