@@ -36,7 +36,7 @@ def extract():
 def load(file_full_path):
     print('>>>> Iniciando Dataframe e abrindo conexão com banco')
 
-    dataframe = pd.read_csv(file_full_path, sep=';')
+    dataframe = pd.read_csv(file_full_path, sep=',')
 
     sqlEngine = create_engine('mysql+mysqlconnector://{user}:{password}@{server}/{database}'.
                               format(user='etl', password='Tocadovento@05051996*', server='localhost', database='scaranni_data'), pool_recycle=3600)
