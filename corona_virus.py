@@ -32,13 +32,12 @@ def extract():
     return os.path.join(save_path, file)
 
 
-def load():
+def load(file_full_path):
     print('>>>> Iniciando Dataframe e abrindo conexão com banco')
 
     dataframe = pd.read_csv(file_full_path, sep=';')
 
     print(dataframe.head())
-    sqlEngine = create_engine('mysql+mysqlconnector://root:@127.0.0.1/scaranni_data', pool_recycle=3600)
     sqlEngine = create_engine('mysql+mysqlconnector://{user}:{password}@{server}/{database}'.
                               format(user='etl', password='Tocadovento@05051996*', server='localhost', database='scaranni_data'), pool_recycle=3600)
 
@@ -52,6 +51,6 @@ def load():
     print('>>>> Carga finalizada')
 
 dados = extract()
-up = load()
+up = load(file_full_path)
 
 
