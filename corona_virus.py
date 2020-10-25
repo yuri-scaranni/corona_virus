@@ -10,7 +10,8 @@ save_path = '/home/ec2-user/scaranni/corona_virus'
 file_type = '.csv'
 #file_date = "{}".format(dt.now().strftime("%Y-%m-%d_%H-%M-%S"))
 file = tablename + file_type
-file_full_path = os.path.join(save_path, file)
+#file_full_path = os.path.join(save_path, file)
+file_full_path = '/home/ec2-user/scaranni/corona_virus/google_sheets_2020-10-21_18-55-07.csv'
 
 
 def extract():
@@ -49,7 +50,7 @@ def load(file_full_path):
         print(e)
     print('>>>> Carga finalizada')
 
-dados = extract()
+#dados = extract()
 up = load(file_full_path)
 
 
