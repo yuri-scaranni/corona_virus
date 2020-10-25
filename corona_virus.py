@@ -38,7 +38,8 @@ def load():
     dataframe = pd.read_csv(file_full_path, sep=';')
 
     print(dataframe.head())
-    sqlEngine = create_engine('mysql://root:@127.0.0.1/scaranni_data', pool_recycle=3600)
+    sqlEngine = create_engine('mysql+mysqlconnector://root:@127.0.0.1/scaranni_data', pool_recycle=3600)
+
     dbConnection = sqlEngine.connect()
     print('>>>> Conectado')
 
