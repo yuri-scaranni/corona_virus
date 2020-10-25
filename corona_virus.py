@@ -5,7 +5,7 @@ import mysql.connector as mysql
 from sqlalchemy import create_engine
 
 tablename = "corona_virus_brasil"
-save_path = '/home/ec2-user/scaranni/extra-o-coronavirus'
+save_path = '/home/ec2-user/scaranni/corona_virus'
 #save_path = r'C:\Users\scaranni\PycharmProjects\yuri_env\codes\extra-o-coronavirus'
 file_type = '.csv'
 #file_date = "{}".format(dt.now().strftime("%Y-%m-%d_%H-%M-%S"))
