@@ -39,7 +39,7 @@ def load(file_full_path):
     dataframe = pd.read_csv(file_full_path, sep=',')
 
     sqlEngine = create_engine('mysql+mysqlconnector://{user}:{password}@{server}/{database}'.
-                              format(user='etl', password='Tocadovento@05051996*', server='localhost', database='scaranni_data'), pool_recycle=3600)
+                              format(user='etl', password='', server='localhost', database='scaranni_data'), pool_recycle=3600)
 
     dbConnection = sqlEngine.connect()
     print('>>>> Conectado')
